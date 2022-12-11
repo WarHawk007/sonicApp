@@ -1,0 +1,27 @@
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<form action="/details" method="post">
+    <input name="start" type="date" /> 
+    <input name="end" type="date" />
+    <input name="submit" type="submit" />
+</form>
+<% if (details) { %>
+<div class="cards">
+    <div class="card">
+        <div class="heading">Total Price of Booked</div>
+        <div class="value"><%= details.totalBooked %></div>
+    </div>
+    <div class="card">
+        <div class="heading">Total Price of In Transit</div>
+        <div class="value"><%= details.totalTransit %></div>
+    </div>
+    <div class="card">
+        <div class="heading">Total Price of Delivered</div>
+        <div class="value"><%= details.totalDelivered %></div>
+    </div>
+    <div class="card">
+        <div class="sub-heading"><%= details.returnedPercent %></div>
+        <div class="heading">Total Price of Returned</div>
+        <div class="value"><%= details.totalReturned %></div>
+    </div>
+</div>
+<% } %>
