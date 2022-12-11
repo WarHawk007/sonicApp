@@ -241,7 +241,7 @@ const getDetails = (start, end) => {
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "x-requested-with": "XMLHttpRequest",
-                "cookie": "twk_idm_key=yxBrlEsIOTmEwJDGY-KQW; TawkConnectionTime=0; twk_uuid_5d8323ab9f6b7a4457e2756b=%7B%22uuid%22%3A%221.6Api7MnmgAGsvJ9t668apvTShQ14rtlfUNvkduMKyTnA4XEbfmIe33D4mKNLgCfDxMzp0KRTk4q4l03iiGGmKb8BXvN1LP0KsKsCwWKmrUyJHK4Y%22%2C%22version%22%3A3%2C%22domain%22%3A%22sonic.pk%22%2C%22ts%22%3A1670746946709%7D; XSRF-TOKEN=eyJpdiI6InZFejg0ZFwvenVWU2M0M0xrVHZSSFhRPT0iLCJ2YWx1ZSI6IktVT2RJaWxHQUVvejQ4OEMyckdHVUVqK3B5QTFSSE1XXC8wZlZDMFRRc0VLTzN5ckdHU2hLWVFaR0U3Z3A3bnhUIiwibWFjIjoiOTcwODRlNmRhMTY4YjI2MGJmMDlhYzQxYmNjYzJjMTM0N2E2ZGNiZTlmNzRlNGY4NWFmOTlmYWM2Y2QzMGY0YyJ9; traxlogistics_session=eyJpdiI6Im9ReGdldTJhQUo4RWZqOEtkRVJlR1E9PSIsInZhbHVlIjoiTGNXY3g2czh5azU4Q0RocVhVdGxkRktzZG1scDFmbjRxeXhiSlFpdnZtcTcySjREaXEwRkVjODE1WmJpbjltYyIsIm1hYyI6IjdmZTNiMDUxZTRhZGY0ZTI5MjAyZmVmNzA2NzQ4YjExNjRlZWRlZDUzY2Q2NmMzM2YwMjkxZGEzZGQyZjNkYWUifQ%3D%3D",
+                "cookie": "twk_idm_key=yxBrlEsIOTmEwJDGY-KQW; TawkConnectionTime=0; twk_uuid_5d8323ab9f6b7a4457e2756b=%7B%22uuid%22%3A%221.6Api7MnmgAGsvJ9t668apvTShQ14rtlfUNvkduMKyTnA4XEbfmIe33D4mKNLgCfDxMzp0KRTk4q4l03iiGGmKb8BXvN1LP0KsKsCwWKmrUyJHK4Y%22%2C%22version%22%3A3%2C%22domain%22%3A%22sonic.pk%22%2C%22ts%22%3A1670782483789%7D; XSRF-TOKEN=eyJpdiI6Ikl3WHhIa3hWRUJTb0NTNGVcL2RJMEJnPT0iLCJ2YWx1ZSI6IkRcL0VBN0pzVHhXK0lDSEhsNVl5RXVqbTBUYk0rZ1BIcktVNjFzbENhRVZVaVM1RjhkdnIwTDlDM09pT0VCRnJTIiwibWFjIjoiOWExYzJlMTFlMDZhN2RmZDc1YTNlNTU4YTc5NzhhNDljYThkYTNiNjE4Y2UyNWUyYTYxMDRiOWM0N2EzZmU4ZSJ9; traxlogistics_session=eyJpdiI6InNKY2d4WTY2Q2I5RWNsd2I3VXkySlE9PSIsInZhbHVlIjoiSUpwbDkyTHFjNlVld3dmclE5ck5KWTZycExqbjFZTDNpN2ZEMGFhVHhzam5GT3NMc2FWRXhLNTdaXC9OZEVMXC9OIiwibWFjIjoiZDQ0ZGE1YjY3Mzc5NzI3OTA1MmI4NGQ2MTk0MzkyNDdlYmRlOWFkYjk1NWNlOTQwZmFiMWQ5OWUyNWUzMDJjZiJ9",
                 "Referer": "https://sonic.pk/cod/reports/summary",
                 "Referrer-Policy": "strict-origin-when-cross-origin"
             },
@@ -288,7 +288,7 @@ const getDetails = (start, end) => {
                     returnedPercent: Math.round((totalReturned/(totalDelivered + totalTransit)) * 100) + '%'
                 })
             }).catch(err => {
-                console.log(err.message)
+                reject(err)
             })
     })
 }

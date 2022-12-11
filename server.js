@@ -22,6 +22,8 @@ app.post('/details', (req, res) => {
         res.render('index', {
             details
         })
+    }).catch(err => {
+        console.log(err)
     })
 })
 
